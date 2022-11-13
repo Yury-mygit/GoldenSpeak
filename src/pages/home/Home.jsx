@@ -9,6 +9,9 @@ const Home = () => {
             <Header/>
             <div style={{height: '500px' }}> 
                 <div>блок 1</div>
+                <div>блок 1</div>
+                <div>блок 1</div>
+                <div>блок 1</div>
             </div>
            
             <Footer/>
