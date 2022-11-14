@@ -24,7 +24,7 @@ export default FirstLine;
 
 const componentStyle = {
     height: '50px',
-    border: '1px solid red',
+    borderBottom: '1px solid red',
     display: 'flex',
     justifyContent: "space-between"
 }
