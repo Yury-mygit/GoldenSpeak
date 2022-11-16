@@ -1,16 +1,35 @@
 import React from 'react';
-import cl from "./Header.module.css"
+
 import FirstLine from './components/FirstLine';
 import SecondLine from './components/SecondLine';
 
+import cl from './Header.module.css'
+
+
 const Header = () => {
-    let id = 1
     return (
-        <div className={cl.header}> 
+        <div className = {cl.wrapper}> 
             <FirstLine/>
+            <hr
+              style={{
+                color: 'black',
+                //  backgroundColor: 'black',
+                 height: "0,5px",
+             }}
+            />   
+              
             <SecondLine/>
         </div>
     );
 };
 
 export default Header;
+
+
+const st_header = {
+
+    padding:'20px 30px 0px 30px',
+    
+    
+    
+}

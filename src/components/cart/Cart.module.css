@@ -1,0 +1,21 @@
+.wrapper{
+    position: fixed;
+    top: 100px;
+    right: 110px;
+}
+
+.imgContent{
+    
+}
+
+.img{
+    width: 75px;
+}
+
+.amount{
+    position: relative;
+    top: -40px;
+    left: 20px;
+    font-size: 500;
+    
+}
