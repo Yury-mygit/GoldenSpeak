@@ -1,16 +1,16 @@
 import React from 'react';
-import SecurityPolicy from './components/SecurityPolicy';
 import arrow_up from './arrow_up_fonless.png'
+import cl from './Footer.module.css'
 
 
 const Footer = () => {
     return (
-        <div style={{...st_wrapper}}>
-            <div style={{display:'flex', justifyContent:'space-between', padding:'10px 0 0 0'}}>
+        <div className={cl.wrapper}>
+            <div className={cl.content}>
                 © Golden speak 2022 
                 <button 
                     onClick={() => {window.scrollTo(0, 0)}}
-                    style={{color:'white', backgroundColor:'black', display:'flex'}}
+                    className={cl.scrollButton}
                 >
                     <p  style={{marginTop: '5px'}}> Наверх </p>
                     <img 
@@ -20,7 +20,7 @@ const Footer = () => {
                 </button>
             </div>
             
-            <SecurityPolicy/>
+            
         </div>
     );
 };
@@ -29,7 +29,7 @@ export default Footer;
 
 
 const st_wrapper = {
-    minHeight:'100px',
+    minHeight:'200px',
     backgroundColor: 'black',
     color: 'white',
     padding: '0px 100px 0px 100px',

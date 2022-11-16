@@ -1,0 +1,27 @@
+.wrapper{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px 40px 0px; 
+    padding: 0px 0px 0px 0px;
+    width: 100%;
+}
+
+.components{
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+}
+
+.textComponent{
+    display: flex; 
+    flex-direction: column;
+    padding: 50px 40px 0px 40px;
+}
+
+.picComponent{
+    display:flex; 
+    flex-direction:row;
+    width:auto;
+}

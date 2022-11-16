@@ -1,19 +1,14 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import Footer from '../../components/footer/Footer';
-import Header from '../../components/header/Header';
+import StButton from '../../components/common/StButton';
+import cl from './About.module.css'
 
 const About = () => {
     return (
-        <div>
-            <Header/>
-            <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
+        <div  className={cl.wrapper}>            
+           
                 <div style={{minHeight: '500px', width:'900px', display:'flex', flexDirection:'column', alignItems:'center' }}> 
-                    <h2 style={{
-                        marginTop: '70px',
-                        marginBottom: '70px', 
-                        fontSize:'50px',
-                    }}> 
+                    <h2 className={cl.title_Golden}>
                         Golden Speak - это служба надомной логопедической помощи. 
                     </h2>
                     <hr
@@ -36,28 +31,12 @@ const About = () => {
                          Мы предоставляем широкий спектр логопедических услуг, выполняемых специалистами на дому у клиента. Мы экономим ваше время и гарантируем высокое качество выполнения услуг. Успешно работаем как с детьми, так и со взрослыми.
                     </p>
 
-                    <Link to={'/'}  style={{...links}}> Главная </Link>
+                    <StButton text={'Главная'} link = {'/'}/>
                 </div>
             </div>
-            <Footer/>
-        </div>
+         
     );
 };
 
 export default About;
 
-const links = {
-    margin: '10px',
-    textDecoration: 'none',
-    fontWeight: '700',
-    color:'white',
-    fontSize:'20px',
-    height: '50px',
-    width:'200px',
-    borderRadius: '25px',
-    display:'flex',
-    alignItems:'center',
-    justifyContent:'center', 
-    backgroundColor: 'rgba(216, 138, 13, 1)',
-    marginBottom:'100px'
-}

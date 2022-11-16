@@ -9,10 +9,11 @@
  */
 
  html {
-	line-height: 1.15;
+	line-height: 1;
 	/* 1 */
 	-webkit-text-size-adjust: 100%;
 	/* 2 */
+	
 }
 
 /* Sections
@@ -22,9 +23,14 @@
  * Remove the margin in all browsers.
  */
 
+a,p,div{
+	margin: 0px;
+}
+
+
 body {
 	margin: 0;
-
+	
 }
 
 /**
