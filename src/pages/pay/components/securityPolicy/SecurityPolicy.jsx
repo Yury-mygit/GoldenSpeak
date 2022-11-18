@@ -1,10 +1,11 @@
 import React from 'react';
 import paySystemLogo from './money3.jpg'
+import cl from './SecurityPolicy.module.css'
 
 const SecurityPolicy = () => {
     return (
        
-        <div style={{...st_SecurityPolicy}}>
+        <div className={cl.wrapper}>
             <SecurityPolicyBody></SecurityPolicyBody>
         </div>
         
@@ -41,12 +42,12 @@ const SecurityPolicyBody = () => {
     );
 };
 
-const st_SecurityPolicy = {
-    fontSize:'16px',
-   
-}
+
 
 
 
 
 export default SecurityPolicy;
+
+
+

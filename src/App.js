@@ -18,9 +18,10 @@ const router = RouterBrouser
 function App() {
 
   const [data, setData] = useState(0)
+  const [modal,setModal] = useState(false)
 
   return (
-    <ThemeContext.Provider value={{data,setData}}>
+    <ThemeContext.Provider value={{data, setData, modal, setModal}}>
       <RouterProvider router={router} />
     </ThemeContext.Provider>
   );

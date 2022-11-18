@@ -40,7 +40,7 @@ const FirstLine = () => {
                 }}><div style={{position:'absolute',width:'250px'}}> Whats upp: tel:+7 985-888-63-31</div></div>
                 
                 <div>
-                    <ActionButton text={'Заказать звонок'}/>
+                    <ActionButton text={'Заказать звонок'} setAction={(data)=>console.log(data)}/>
                 </div>    
             </div>
 
