@@ -1,11 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '../../App';
+import { useContext } from 'react';
 
 const ActionButton = ({text, action, setAction}) => {
+
+    const modalWindow = useContext(ThemeContext)
+
     return (
         <button  
             style={{...links}}
-            onClick={()=>setAction(!action)}
+            onClick={()=>modalWindow.setModal(!modalWindow.modal)}
         > 
             {text} 
         </button>

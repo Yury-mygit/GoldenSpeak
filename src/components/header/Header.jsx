@@ -14,7 +14,7 @@ const Header = () => {
               style={{
                 color: 'black',
                 //  backgroundColor: 'black',
-                 height: "0,5px",
+                height: "0,5px",
              }}
             />   
               

@@ -5,3 +5,43 @@
     justify-content: center;
     flex: 1 0 auto;
 }
+
+.payBlock__buttons{
+    display: flex;
+    align-items: center;
+}
+.payBlock__buttons_title{
+    font-size: 20px;
+    margin-right: 50px;
+}
+
+.payBlock__oneButton{
+    margin: 0px 10px 0px 10px;
+
+}
+
+.payBlock__oneButton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.payBlock__custom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.payBlock__custom_title{
+    font-size: 20px;
+    margin-right: 100px;
+}
+
+.payBlock__title{
+    font-size: 30px;
+}
+
+.payBlock__politics{
+    margin-bottom: 50px;
+}

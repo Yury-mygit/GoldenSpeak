@@ -1,0 +1,30 @@
+.wrapper{
+    position: fixed;
+    display: flex;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    position: relative;
+    width: 900px;
+    height: 600px;
+    background-color: aliceblue;
+    /* overflow: scroll; */
+    display: flex;
+    flex-direction: column;
+}
+
+.cross{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    top: -10px;
+    left: 1000px;
+}
