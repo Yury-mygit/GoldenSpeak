@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { useRef } from 'react';
 import cl from './task.module.css'
-const Task = () => {
+
+const TaskCanvas_01 = () => {
 
     useEffect(()=>{
         let ctx = canvasRef.current.getContext('2d')
@@ -26,4 +27,4 @@ const Task = () => {
     );
 };
 
-export default Task;
+export default TaskCanvas_01;

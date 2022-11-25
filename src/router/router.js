@@ -4,7 +4,7 @@ import Home from '../pages/home/Home';
 import {
     createBrowserRouter,
   } from "react-router-dom";
-import Tasks from '../pages/tasks/Tasks';
+import TasksPage from '../pages/tasks/TasksPage';
 import News from '../pages/news/News';
 import Articles from '../pages/articles/Articles';
 import Contacts from '../pages/contacts/Contacts';
@@ -52,7 +52,7 @@ import Page404 from '../pages/404/Page404';
             },     
             {
                 path: "/tasks",
-                element: <Tasks/>,
+                element: <TasksPage/>,
                 errorElement: <div>Error 404</div>
             },
         ]

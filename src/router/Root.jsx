@@ -20,7 +20,7 @@ const Root = () => {
     let inner = <Home/>
     let modalWindow = <Modal></Modal>
 
-    console.log(theme)
+    // console.log(theme)
 
     if (location.pathname != '/')  inner = <Outlet/>
     if (theme.modal == false) modalWindow = ''
