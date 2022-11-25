@@ -1,15 +1,21 @@
-import React from 'react';
-import { generate } from '../../Utils/blockListGenerator';
+import React, { useState } from 'react';
+import ConditionalRender from './ConditionalRender';
 import cl from './Home.module.css'
-
-let blocks = generate()
+import state from './State';
 
 const Home = () => {
+
+    const [blocks, setBlocks] = useState([...state ])
+
     return (
         <div className={cl.wrapper}>             
-            <div style={{minHeight: '500px', display:'flex', flexDirection:'column' }}>   
-                {blocks.map(block=>block)}
-            </div>             
+                {blocks.map(block=>{
+                    return <ConditionalRender 
+                                key={block.id} 
+                                type={block.type} 
+                                data={block.data}
+                            />
+                })}                     
         </div>
     );   
 };

@@ -1,11 +1,11 @@
 import React from 'react';
 
-const BlockFixed = ({id, pic_2}) => {
+const BlockFixed = ({id, data}) => {
     // console.log(id)
     return (
         <div 
             key = {id} 
-            style={{backgroundImage: `url(${pic_2})`, ...styles.wrapper}}                                       
+            style={{backgroundImage: `url(${data.fon})`, ...styles.wrapper}}                                       
          >   
             <div style = {{...styles.titleBlock}}>
                 <h1 style ={{...styles.title}}> 
