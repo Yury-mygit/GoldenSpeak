@@ -1,0 +1,42 @@
+$contentWidth: 1000px;
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+
+    h2{
+        font-size: 30px;
+    }
+
+    >h2{
+        font-size: 45px;
+    }
+   
+    font-size: 20px;
+
+    .motto{
+        margin-bottom: 40px;
+    }
+
+   
+    .block{
+        display: flex;
+        flex-direction: row;
+        width: $contentWidth;
+        .block__imgWrapper{
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            border: 1px solid black;
+
+            img{
+                position: relative;
+                width: 100px;
+                height: auto;
+            }
+        }
+    }
+}

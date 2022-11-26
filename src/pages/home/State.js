@@ -1,14 +1,109 @@
 import { generate, pics, defBlock } from '../../Utils/blockListGenerator';
 
 const state = [
-    {type: 'face',    id: 1,    data:{ fon: pics.fon_block_1, imgs:[]}},
-    {type: 'content', id: 2,    data:
-    { 
-        layers: 4, 
-        imgs:[pics.fr_b2_pic_1,pics.fr_b2_pic_2,pics.fr_b2_pic_3,pics.fr_b2_pic_4,],
-        maitTitle:'Направления нашей работы',
-    }},
-    {type: 'benefit', id: 3,    data:{ imgs:[]}},
+    {
+        type: 'face',
+        id: 1,    
+        data:
+        { 
+            fon: pics.fon_block_1, 
+            title:"Golden speak",
+            motto:'Логопед на дом! Москва.',
+            text:'Устраняем недостатки в речи. Быстро и качественно!'
+        },
+    },
+    {
+        type: 'content', 
+        id: 2,    
+        data:
+        { 
+            title:'Направления нашей работы',
+            layers: [
+                { 
+                    layerId:0,
+                    position:'right', 
+                    img: {
+                        url: pics.fr_b2_pic_1, 
+                        imgAlt: 'Альтернативный текст' 
+                    },
+                    text:{
+                        title:'Коррекция звукопроизношения',
+                        text:'Ставим звуки Р, Л, Ш, Ж, С, З, К, Г, П, Б, автоматизируем их и вводим в речь у детей от 4 до 8 лет текст',
+                        linkTitle:'Узнать больше',
+                        Link:'#'
+                    }
+                },
+                { 
+                    layerId:1,
+                    position:'left', 
+                    img: {
+                        url: pics.fr_b2_pic_2, 
+                        imgAlt: 'Альтернативный текст' 
+                    },
+                    text:{
+                        title:'Коррекция звукопроизношения',
+                        text:'Ставим звуки Р, Л, Ш, Ж, С, З, К, Г, П, Б, автоматизируем их и вводим в речь у детей от 4 до 8 лет текст',
+                        linkTitle:'Узнать больше',
+                        Link:'#'
+                    }
+                },
+                { 
+                    layerId:2,
+                    position:'right', 
+                    img: {
+                        url: pics.fr_b2_pic_3, 
+                        imgAlt: 'Альтернативный текст' 
+                    },
+                    text:{
+                        title:'Коррекция звукопроизношения',
+                        text:'Ставим звуки Р, Л, Ш, Ж, С, З, К, Г, П, Б, автоматизируем их и вводим в речь у детей от 4 до 8 лет текст',
+                        linkTitle:'Узнать больше',
+                        Link:'#'
+                    }
+                },
+                { 
+                    layerId:3,
+                    position:'left', 
+                    img: {
+                        url: pics.fr_b2_pic_4, 
+                        imgAlt: 'Альтернативный текст' 
+                    },
+                    text:{
+                        title:'Коррекция звукопроизношения',
+                        text:'Ставим звуки Р, Л, Ш, Ж, С, З, К, Г, П, Б, автоматизируем их и вводим в речь у детей от 4 до 8 лет текст',
+                        linkTitle:'Узнать больше',
+                        Link:'#'
+                    }
+                },
+            ] 
+        }
+    },
+    {
+        type: 'benefit', 
+        id: 3,    
+        data:
+        { 
+            title:'Почему выбирают нас',
+            motto:'7 из 10 клиентов приходят к нам по "сарафанному радио"! Нас рекомендуют, потому, что:',
+            layers:[
+                {
+                    url:pics.fr_b3_pic_1,
+                    title:'Мы экономим ваше время!',
+                    motto:'У нас действует система абонементов, благодаря которой вы будете экономить до 4000 рублей в месяц.',
+                },
+                {
+                    url:pics.fr_b3_pic_2,
+                    title:'Мы заботимся о бюджете вашей семьи!!',
+                    motto:'Наш специалист будет приезжать к Вам домой в удобное для Вас время.',
+                },
+                {
+                    url:pics.fr_b3_pic_3,
+                    title:'Мы экономим ваше время!',
+                    motto:'Наш специалист будет приезжать к Вам домой в удобное для Вас время.',
+                },
+            ]
+        }
+    },
     {type: 'costs',   id: 4,    data:{ imgs:[]}},
     {type: 'rewiews', id: 5,    data:{ imgs:[]}},  
 ]

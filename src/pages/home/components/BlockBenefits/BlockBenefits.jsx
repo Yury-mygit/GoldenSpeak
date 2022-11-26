@@ -1,38 +1,25 @@
 import React from 'react';
+import cl from './BlockBenefits.module.scss'
 
-const BlockBenefits = () => {
+const BlockBenefits = ({data}) => {
+
+    console.log(data)
+
     return (
-        <div>
+        <div className={cl.wrapper}>
             <h2> Почему выбирают нас? </h2>
-            <div> 7 из 10 клиентов приходят к нам по "сарафанному радио"! Нас рекомендуют, потому, что:</div>
-            <div>
-                <div> аватар </div>
+            <div className={cl.motto}>{data.motto}</div>
+
+            <div className={cl.block}>
+                <div className={cl.block__imgWrapper}> 
+                    <img src={data.layers[0].url}/> 
+                </div>
                 <div> 
-                    <h4> Мы экономим ваше время! </h4>
-                    <p>Наш специалист будет приезжать к Вам домой в удобное для Вас время.</p>
+                    <h4> {data.layers[0].title} </h4>
+                    <p> {data.layers[0].motto} </p>
                 </div>
             </div>
-            <div>
-                <div> аватар </div>
-                <div> 
-                    <h4> Мы экономим ваше время! </h4>
-                    <p>Наш специалист будет приезжать к Вам домой в удобное для Вас время.</p>
-                </div>
-            </div>
-            <div>
-                <div> аватар </div>
-                <div> 
-                    <h4> Мы экономим ваше время! </h4>
-                    <p>Наш специалист будет приезжать к Вам домой в удобное для Вас время.</p>
-                </div>
-            </div>
-            <div>
-                <div> аватар </div>
-                <div> 
-                    <h4> Мы экономим ваше время! </h4>
-                    <p>Наш специалист будет приезжать к Вам домой в удобное для Вас время.</p>
-                </div>
-            </div>
+            
         </div>
     );
 };

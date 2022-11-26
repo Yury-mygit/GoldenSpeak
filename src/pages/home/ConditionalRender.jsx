@@ -12,11 +12,11 @@ const ConditionalRender = ({type, data}) => {
  let block
 
  switch (type) {
-    case 'face': block = <BlockFixed key={1} data={data}/>; break;
-    case 'content': block = <BlockFotoText key={2}  pic_2={data.fon}/>; break;
-    case 'benefit': block = <BlockBenefits key={3}/>; break;
-    case 'costs': block = <BlockCosts key={4}/>; break;
-    case 'rewiews': block = <BlockReviews key={5}/>; break;
+    case 'face': block = <BlockFixed  data={data}/>; break;
+    case 'content': block = <BlockFotoText   data={data}/>; break;
+    case 'benefit': block = <BlockBenefits data={data}/>; break;
+    case 'costs': block = <BlockCosts />; break;
+    case 'rewiews': block = <BlockReviews />; break;
     
    
     default: block = <div></div>

@@ -1,22 +1,21 @@
 import React from 'react';
 
-const BlockFixed = ({id, data}) => {
+const BlockFixed = ({data}) => {
     // console.log(id)
     return (
         <div 
-            key = {id} 
             style={{backgroundImage: `url(${data.fon})`, ...styles.wrapper}}                                       
          >   
             <div style = {{...styles.titleBlock}}>
                 <h1 style ={{...styles.title}}> 
                     
-                    <p style = {{color: 'rgb(216, 138, 13)',}}>Golden speak</p> 
-                    <p>Логопед на дом! Москва. </p>
+                    <p style = {{color: 'rgb(216, 138, 13)',}}>{data.title}</p> 
+                    <p>{data.motto}</p>
                     
                 </h1>
 
                 <div style={{...styles.moto}}> 
-                    Устраняем недостатки в речи. Быстро и качественно!
+                    {data.text}
                 </div>
             </div> 
                                             
