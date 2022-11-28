@@ -5,12 +5,12 @@ const SecondLine = () => {
     return (
         <div style={{...styles.container}}>
                 <Link to={'/'}         style={{...styles.links}}> Главная </Link>
-                <Link to={'/about'}     style={{...styles.links}}> О нас </Link>
+                {/* <Link to={'/about'}     style={{...styles.links}}> О нас </Link> */}
                 <Link to={'/news'}      style={{...styles.links}}> Новости</Link>
                 <Link to={'/articles'}  style={{...styles.links}}> Статьи </Link>
                 <Link to={'/pay'}       style={{...styles.links}}> Оплата </Link>
                 <Link to={'/contacts'}  style={{...styles.links}}> Контакты </Link>
-                <Link to={'/club'}      style={{...styles.links}}> Клуб логопедов </Link>
+                {/* <Link to={'/club'}      style={{...styles.links}}> Клуб логопедов </Link> */}
                 <Link to={'/tasks'}     style={{...styles.links}}> Задания </Link>
             </div>
     );

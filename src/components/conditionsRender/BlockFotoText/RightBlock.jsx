@@ -1,9 +1,8 @@
 import React from 'react';
-import StButton from '../../../../components/common/StButton';
+import StButton from '../../common/StButton';
 
 
 const RightBlock = ({cl, data}) => {
-
 
     let text = 
             <div className={cl.textComponent}>
@@ -16,7 +15,7 @@ const RightBlock = ({cl, data}) => {
                     link={data.text.link}
                 />
             </div>
-        
+       
     
     const image = 
             <div className={cl.picComponent}>

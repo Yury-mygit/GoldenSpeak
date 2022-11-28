@@ -3,42 +3,46 @@ import Footer from '../../components/footer/Footer';
 import Header from '../../components/header/Header';
 import { useState, useEffect } from 'react';
 
+import { useSelector, useDispatch } from 'react-redux'
+import {decrement, increment} from '../../store/counterSlice'
+
+// import {} from './'
+import {useGetAllPostsQuery} from '../../API/postsAPI'
+import {useGetPageDataQuery} from '../../API/pageAPI'
+import {useGetAllUsersQuery} from '../../API/usersAPI'
+
 import cl from './style/News.module.css'
 
 const News = () => {
 
-    const [news, setNews] = useState([])
+    const [newsCount, setNewsCount] = useState(10)
 
-    useEffect(()=>{
+    const count = useSelector(state => state.counter.value)
+    const dispatch = useDispatch()
+    console.log(count)
 
-        let url = 'https://jsonplaceholder.typicode.com/posts?_start=0&_limit=15';
-
-        const fetchData = async() => {
-            let response = await fetch(url);  
+    const { data: news, error, isLoading } = useGetAllPostsQuery ({start: 0, limit: newsCount})
+    const { data: users, usersError, usersIsLoading } = useGetAllUsersQuery ({start: 0, limit: newsCount})
+    const { data: pageData, errorPageData, isLoadingPageData } = useGetPageDataQuery ({}) 
     
-            if (response.ok) { // если HTTP-статус в диапазоне 200-299
-              // получаем тело ответа (см. про этот метод ниже)
-              let json = await response.json();
-              // выводим данные в консоль
-            //   console.log(json)
-              setNews(json)
-            } else {
-              alert("Ошибка HTTP: " + response.status);
-            }
-        }
-        fetchData();
+    // const [page, setPage] = useState('sdsdsd')
+    // const [news, setNews] = useState([])
+    // const [usersData, setUsersData] = useState([])
+
+    // useEffect(()=>{
+
+    //     setNews(posts)
+    //     setPage(pageData)
+    //     setUsersData(users)
         
-    },[])
+    // },[posts,pageData,users])
 
+    console.log(pageData  )
 
-
-    console.log('news = ',typeof(news), news)
-
-
-
+   
     let inner = ''
 
-    if (news.length) inner = news.map((item, index)=>{
+    if (news && news.length) inner = news.map((item, index)=>{
         return (
             <div 
                 key={index} 
@@ -60,9 +64,18 @@ const News = () => {
 
 
     return (  
-        <div className={cl.wrapper}>
+        <div className={cl.wrapper} >
             <h2> Новости </h2>
-            <div className={cl.news_menu} > меню </div>
+            <div className={cl.news_menu} > 
+                меню 
+                <select value={newsCount} onChange={(e)=>setNewsCount(e.target.value)}>
+                    <option value={5}> 5 </option>
+                    <option value={10}> 10 </option>
+                    <option value={20}> 20 </option>
+                    <option value={40}> 40 </option>
+                </select>
+                {/* <button onClick={()=>setPage("dsd")}>статус</button> */}
+            </div>
             {inner}
         </div>     
     );

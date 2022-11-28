@@ -1,5 +1,5 @@
 import React from 'react';
-import StButton from '../../../../components/common/StButton';
+import StButton from '../../common/StButton'
 import cl from './BlockFotoText.module.scss'
 import RightBlock from './RightBlock';
 

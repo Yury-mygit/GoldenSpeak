@@ -7,7 +7,7 @@ import {
 import TasksPage from '../pages/tasks/TasksPage';
 import News from '../pages/news/News';
 import Articles from '../pages/articles/Articles';
-import Contacts from '../pages/contacts/Contacts';
+import Contacts from '../pages/contacts/PageContacts';
 import Club from '../pages/club/Club';
 import Pay from '../pages/pay/Pay';
 import Root from './Root';
@@ -20,11 +20,7 @@ import Page404 from '../pages/404/Page404';
         element: <Root/>,
         errorElement: <Page404/>,
         children:[
-            {
-                path: "/about",
-                element: <About/>,
-                errorElement: <div>Error 404 1</div>
-            },
+           
             {
                 path: "/news",
                 element: <News/>,
@@ -45,11 +41,7 @@ import Page404 from '../pages/404/Page404';
                 element: <Contacts/>,
                 errorElement: <div>Error 404</div>
             },
-            {
-                path: "/club",
-                element: <Club/>,
-                errorElement: <div>Error 404</div>
-            },     
+              
             {
                 path: "/tasks",
                 element: <TasksPage/>,
