@@ -1,6 +1,6 @@
 import React from 'react';
-import cl from './Modal.module.css'
-import { ThemeContext } from '../App';
+import cl from './GlobalModal.module.css'
+import { ThemeContext } from '../../../../App';
 import { useContext } from 'react';
 
 const Modal = ({children}) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import cl from './Styles/Tasks.module.scss'
+import cl from '../Styles/Tasks.module.scss'
 import { useState } from 'react';
 
 

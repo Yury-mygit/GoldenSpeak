@@ -1,19 +1,15 @@
 import './App.css';
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-} from "react-router-dom";
-
+import {createBrowserRouter, RouterProvider, Route} from "react-router-dom";
 import { createContext, useContext, useState } from 'react';
+import RouterBrouser from './router/router';
+import settings from './settings';
 
 const ThemeContext = createContext(null);
 
-         
-
-import RouterBrouser from './router/router';
-
 const router = RouterBrouser
+
+// console.log(settings.server)
+const server = settings.server
 
 function App() {
 

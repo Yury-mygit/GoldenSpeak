@@ -1,17 +1,18 @@
 import React from 'react';
+import settings from '../../../settings';
 
 const BlockCard = ({cl, data}) => {
     return (
         <div className={cl.blockCard}>
             <div className={cl.block__imgWrapper}> 
-                    <img src={data.url}/>
+                    <img src={`${settings.server}image/${data.url}`}/>
             </div>
             <h3> 
-                Разовое занятие 
+                {data.title}
             </h3> 
             
             <div> 
-                Стоимость разового занятия, в том числе первичной логопедической диагностики, составляет 1.600 рублей.
+                {data.text}
             </div>
         </div>
     );

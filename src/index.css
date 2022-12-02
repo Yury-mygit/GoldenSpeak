@@ -30,7 +30,7 @@ a,p,div{
 
 body {
 	margin: 0;
-	
+	min-width: 1200px;
 }
 
 /**

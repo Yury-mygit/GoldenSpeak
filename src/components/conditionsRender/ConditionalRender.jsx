@@ -12,6 +12,8 @@ const ConditionalRender = ({type, data}) => {
 
  let block
 
+
+
  switch (type) {
     case 'face': block = <BlockFixed  data={data}/>; break;
     case 'content': block = <BlockFotoText   data={data}/>; break;
@@ -23,13 +25,8 @@ const ConditionalRender = ({type, data}) => {
     default: block = <div></div>
 }
 
-  
-// console.log(block)
-
-    return (
-        
+    return (       
         block
-        
     );
 };
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import cl from '../Styles/Tasks.module.scss'
+import cl from '../../Styles/Tasks.module.scss'
 
 const TaskView = ({id, desk, image, imageExt, setTask}) => {
 

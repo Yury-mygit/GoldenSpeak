@@ -1,5 +1,7 @@
 import React from 'react';
+import settings from '../../../settings';
 import StButton from '../../common/StButton';
+
 
 
 const RightBlock = ({cl, data}) => {
@@ -20,7 +22,7 @@ const RightBlock = ({cl, data}) => {
     const image = 
             <div className={cl.picComponent}>
                 <img 
-                    src={data.img.url} 
+                    src={`${settings.server}image/${data.img.url}`} 
                 />
             </div>   
     

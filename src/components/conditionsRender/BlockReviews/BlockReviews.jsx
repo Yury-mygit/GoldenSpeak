@@ -1,4 +1,5 @@
 import React from 'react';
+import settings from '../../../settings';
 import cl from './blockReviews.module.scss'
 
 const BlockReviews = ({data}) => {
@@ -10,7 +11,7 @@ const BlockReviews = ({data}) => {
            
             <div className={cl.galarywrapper}>
                 <div>
-                    <img src={data.layers[0].url}></img>
+                    <img src={`${settings.server}image/${data.layers[0].url}`}></img>
                 </div>
                 <div>
                     <p>

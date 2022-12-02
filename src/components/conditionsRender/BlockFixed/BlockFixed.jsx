@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import settings from '../../../settings';
 
 const BlockFixed = ({data}) => {
-    // console.log(id)
     return (
         <div 
-            style={{backgroundImage: `url(${data.fon})`, ...styles.wrapper}}                                       
+            style={{backgroundImage: `url(${settings.server}image/${data.fon})`, ...styles.wrapper}}                                       
          >   
             <div style = {{...styles.titleBlock}}>
                 <h1 style ={{...styles.title}}> 
