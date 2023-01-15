@@ -3,9 +3,11 @@ import cl from './Modal.module.css'
 import { ThemeContext } from '../../../../App';
 import { useContext } from 'react';
 
-const Modal = ({children}) => {
+const Modal = ({children, show}) => {
 
     const modalWindow = useContext(ThemeContext)
+
+    if (modalWindow.modal == false) return ''
 
     return (
         <div className={cl.wrapper}>

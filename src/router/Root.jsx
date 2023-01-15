@@ -1,7 +1,4 @@
 import React from 'react';
-
-
-
 import { Outlet, useLocation} from 'react-router-dom';
 import Cart from '../components/cart/Cart';
 import Footer from '../components/footer/Footer';
@@ -20,52 +17,26 @@ const Root = ({}) => {
     let location = useLocation()
     let theme = useContext(ThemeContext)
 
-    const 
-    { 
-        data, 
-        isError, 
-        isLoading, 
-        isFetching 
-    } = useGetPageDataQuery (10001)
+    const {data,isError,isLoading,isFetching} = useGetPageDataQuery (10001)
    
-    let inner =<LoadingPage/>
-    
-    if (!isLoading){
-        inner= <Home pageData={Object.values(data[0].content)}/>       
-    } 
+    if (isLoading) return <LoadingPage/>
+    if (isError)   return (<div> Произошла ошибка, пожалуйста, попробуйте позднее </div>)
    
-    if (isError) inner = <ErrorPage/>
-
-    let modalWindow = <Modal/>
-   
-    
-    if (location.pathname != '/')  inner = <Outlet/>
-    if (theme.modal == false) modalWindow = ''
-
-    return (
-        
-        <div className={cl.wrapper}>
-             
+    return (        
+        <div className={cl.wrapper}>            
                 <Header/>
                 <Cart/>
-                {modalWindow}
-                {inner}
-                
+                <Modal
+                    show = {theme.modal}
+                />
+                <Outlet/>               
                 <Footer/>  
-               
+        </div>        
+    )  
 
-        </div>
-
-       
-        
-    )   
    
 };
 
 export default Root;
 
-
-const styleBlock__wrapper = {
-    height: '100px', 
-}
 

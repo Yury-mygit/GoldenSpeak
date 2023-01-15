@@ -10,7 +10,7 @@ const ActionButton = ({text, action, setAction}) => {
     return (
         <button  
             style={{...links}}
-            onClick={()=>modalWindow.setModal(!modalWindow.modal)}
+            onClick = {action}
         > 
             {text} 
         </button>

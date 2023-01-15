@@ -1,50 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
+import { ThemeContext } from '../../../App';
 import ActionButton from '../../common/ActionButton';
 
-import cl from './FirstLine.module.css'
+import cl from './FirstLine.module.scss'
 
 import logo from './Logo.png'
 
 const FirstLine = () => {
 
     const [buttonOn, serbuttonOn] = useState(false)
+    const modalWindow = useContext(ThemeContext)
 
     return (
         <div className={cl.firstLine_wrapper} > 
-            <div style={{...styles.st_item}}>
-                <img 
-                    src={logo}
-                    style={{
-                        width:'50px',
-                    }}
-                />
+            <div className={cl.logo}>
+                <img src={logo}/>
             </div>
-
-
-            <div style={{display:'flex', justifyContent:'center',...styles.st_item}}>
-                <div style={{
-                    
-                    position:'relative',
-                    top:'10px'
-                }}
-                >© Golden speak 2022</div> 
-            </div>
-
-
-            <div style={{display:'flex',...styles.st_item}}>
-                <div style={{
-                    paddingRight:'70px',
-                    position:'relative',
-                    left:'-160px',
-                    top:'10px'
-                }}><div style={{position:'absolute',width:'250px'}}> Whats upp: tel:+7 985-888-63-31</div></div>
-                
-                <div>
-                    <ActionButton text={'Заказать звонок'} setAction={(data)=>console.log(data)}/>
-                </div>    
-            </div>
-
-            
+ 
+            <ActionButton 
+                text={'Заказать звонок'} 
+                action={()=>modalWindow.setModal(!modalWindow.modal)}
+            />
+                          
         </div> 
     );
 };

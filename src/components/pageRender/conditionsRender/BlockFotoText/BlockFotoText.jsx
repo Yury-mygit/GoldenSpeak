@@ -1,0 +1,28 @@
+import React from 'react';
+import StButton from '../../../../components/common/StButton'
+import cl from './BlockFotoText.module.scss'
+import RightBlock from './RightBlock';
+
+function BlockFotoText({data}) {
+
+    // console.log(data)
+
+    return (
+        <div className={cl.wrapper}>
+
+            <h2>{data.title}</h2>
+
+            
+
+            {data.layers.map((item, index)=>{
+                //  console.log(item)
+
+                return <RightBlock key={item.id} cl={cl} data={item}/>
+            })}
+            
+        </div>
+    );
+}
+
+export default BlockFotoText;
+
