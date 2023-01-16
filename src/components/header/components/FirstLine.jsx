@@ -1,5 +1,5 @@
 import React, { useState,useContext } from 'react';
-import { ThemeContext } from '../../../App';
+import { ThemeContext } from '../../../App/App';
 import ActionButton from '../../common/ActionButton';
 
 import cl from './FirstLine.module.scss'

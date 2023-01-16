@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Menu from './Menu/Menu';
 import cl from './BlockNews.module.scss'
-// import { useGetNewsBlockDataQuery, useAddNewsMutation } from '../../../../API/pageAPI';
-// import { useGetNewsQuery, useAddNewsMutation } from '../../../../API/newsAPI';
 import { useGetNewsQuery, useAddNewsMutation } from '../../../../API/newsAPI';
 import NewsList from './NewsList/NewsList';
 

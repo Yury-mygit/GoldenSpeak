@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import cart from './Cart.png';
 import cl from './Cart.module.css'
-import { ThemeContext } from '../../App';
+import { ThemeContext } from '../../App/App';
 
 import {useContext } from 'react';
 

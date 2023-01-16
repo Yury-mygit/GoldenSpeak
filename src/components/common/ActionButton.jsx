@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ThemeContext } from '../../App';
+import { ThemeContext } from '../../App/App';
 import { useContext } from 'react';
 
 const ActionButton = ({text, action, setAction}) => {

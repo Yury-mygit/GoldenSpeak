@@ -1,26 +1,22 @@
 import React, {createElement as e} from 'react';
 import cl from './TaskList.module.scss'
-import TaskItem from './TaskItemWrapper/TaskItem/TaskItem';
-import TaskItemWrapper from './TaskItemWrapper/TaskItemWrapper.jsx';
-import { createElement } from 'react';
-
-  
+import TaskItem from './TaskItem/TaskItem'; 
                     
 const TaskList = ({data, setTaskModal, editTaskModalShow , setEditTaskModalShow}) => {
 
-    // console.log(data)
     return (
         <div className={cl.wrapper}>
             {data.map((i)=>{
                 return (
-                    <TaskItemWrapper 
+                    <TaskItem 
+                    key={i.id} 
+                    id={i.id}
+                    desk={i.deskription}
+                    image={i.img_url}
+                    imageExt={i.imgext_url}
+                    setTask={setTaskModal}
+                />
 
-                        i = {i}
-                        key={i.id}
-                        setTaskModal = {setTaskModal}
-                        editTaskModalShow = {editTaskModalShow}
-                        setEditTaskModalShow = {setEditTaskModalShow}
-                    />
                 )
             })}
         </div>

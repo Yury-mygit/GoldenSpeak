@@ -4,9 +4,9 @@ import Cart from '../components/cart/Cart';
 import Footer from '../components/footer/Footer';
 import Header from '../components/header/Header';
 import Modal from '../components/header/components/modal/Modal';
-import Home from '../pages/home/Home';
+
 import cl from './Root.module.css'
-import { ThemeContext } from '../App';
+import { ThemeContext } from '../App/App';
 import { useContext } from 'react';
 import { useGetPageDataQuery } from '../API/pageAPI';
 import LoadingPage from '../pages/loadingPage/LoadingPage';
