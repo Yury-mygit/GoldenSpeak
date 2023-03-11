@@ -1,0 +1,32 @@
+.task_menu{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 230px;
+    // height: 5ц00px;
+    // top: 50px;
+    left: 20px;
+    // background-color: rgba(230,230,230,1);
+    // border: 1px solid green;
+    margin: 0px 10px;
+}
+
+.counter{
+    margin: 0px 10px 10px 10px;
+    // padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    font-weight: 400; 
+    // color:white;
+    font-size:14px;
+    height: 25px;
+    width:80%;
+    border-radius: 10px;
+    // border:1px solid green;
+    display:flex;
+    align-items:center;
+    justify-content:center; 
+    background-color: rgba(240, 240, 240, 1);
+    cursor: pointer;
+    
+}

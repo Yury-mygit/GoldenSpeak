@@ -4,7 +4,7 @@ import cl from './ErrorPage.module.scss'
 const ErrorPage = () => {
     return (
         <div className={cl.wrapper}>
-            Произошла ошибка...
+            "Это страница ошибки" Произошла ошибка...
         </div>
     );
 };

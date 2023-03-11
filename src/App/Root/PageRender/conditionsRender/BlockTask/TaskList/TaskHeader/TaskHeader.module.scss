@@ -1,0 +1,27 @@
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0px 15px 0px;
+    .id{
+        width: 150px;
+
+    }
+    .type{
+        width: 150px;
+    }
+    .direction{
+        width: 150px;
+    }
+    .level{
+        width: 150px;
+    }
+    .date{
+        width: 150px;
+    }
+
+    .br{
+        // border: 1px solid red;
+        display: flex;
+        justify-content: center;
+    }
+}

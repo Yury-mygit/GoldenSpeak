@@ -1,0 +1,33 @@
+.wrapper{
+    margin: 5px 10px 5px 10px;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size:14px;
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    cursor: pointer;
+    // border: 1px solid green;
+    .item{
+        margin: 0px 10px 5px 10px;
+        display:flex;
+        flex-direction: row;
+        align-items:center;
+        cursor: pointer;
+
+        input{
+            width: 20px;
+            height: 20px;
+            margin: 0px 10px 0px 0px;
+        }
+        label{
+            font-size: 15px;
+        }
+    }
+    .title{
+        margin: 0px 10px 10px 10px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+}

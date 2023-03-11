@@ -9,7 +9,7 @@ export const tasksApi = createApi({
     endpoints: (build) =>  ({
         getTasks: build.query
         ({
-          query: () => `tasks`,
+          query: (limit=10) => `tasks?_limit=${limit}`,
           providesTags: (result) =>
           // is result available?
           result
@@ -20,6 +20,11 @@ export const tasksApi = createApi({
               ]
             : // an error occurred, but we still want to refetch this query when `{ type: 'Posts', id: 'LIST' }` is invalidated
               [{ type: 'tasks', id: 'LIST' }],      
+        }),
+
+        getTasksTypes: build.query
+        ({
+          query: () => `tasks_types`,     
         }),
        
 
@@ -42,5 +47,6 @@ export const tasksApi = createApi({
   export const
   {
     useGetTasksQuery,
+    useGetTasksTypesQuery,
     useUpdateTasksMutation,
   } = tasksApi

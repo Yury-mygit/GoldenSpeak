@@ -1,0 +1,18 @@
+.news_menu{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 500px;
+    top: 50px;
+    left: 20px;
+    // background-color: rgba(230,230,230,1);
+   
+    margin: 0px 10px;
+}
+
+.counter{
+    // flex-grow: 1;
+    width: 100%;
+}

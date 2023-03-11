@@ -3,7 +3,7 @@ import './App.css';
 import { createContext, useContext, useState } from 'react';
 import settings from "../general/settings";
 import { useGetPageDataQuery } from '../API/pageAPI';
-import Root from '../router/Root';
+import Root from './Root/Root';
 
 
 import {
@@ -16,14 +16,17 @@ import {
   useNavigate, 
 } from "react-router-dom";
 // import ConditionalRender from './components/conditionsRender/ConditionalRender';
-import PageRender from '../components/pageRender/PageRender';
+import PageRender from './Root/PageRender/PageRender';
+import ErrorPage from '../pages/errorPage/ErrorPage';
+import PersonalArea from '../pages/PersonalArea/PersonalArea';
+import LoadingPage from '../pages/loadingPage/LoadingPage';
 
 const ThemeContext = createContext(null);
 
 const server = settings.server
 
 function App() {
-  const {data, isError, isLoading, isFetching } = useGetPageDataQuery (10001)
+  const {data, isError, isLoading, isFetching } = useGetPageDataQuery ()
 
   const [modal,setModal] = useState(false)
 
@@ -31,9 +34,10 @@ function App() {
     createRoutesFromElements(
       <Route 
         path="/" 
-        element={<Root />} 
+        element={<LoadingPage/>} 
         // errorElement={<NavToMain />}
-        errorElement={<div></div>}
+        errorElement={<ErrorPage/>}
+        // errorElement={<LoadingPage/>}
       >
         <Route index element={<div>dsds</div>} key='222'/>
 
@@ -75,6 +79,11 @@ function App() {
                       key={item.id}
                     />
         })}
+        <Route 
+                      path="personal-area" 
+                      element={<PersonalArea />} 
+                      key={'1000'}
+                    />
       </Route>
     )
   );
